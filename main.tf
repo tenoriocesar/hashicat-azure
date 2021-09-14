@@ -101,11 +101,6 @@ resource "azurerm_public_ip" "catapp-pip" {
   allocation_method   = "Dynamic"
   domain_name_label   = "${var.prefix}-meow"
 }
-
-resource "azurerm_virtual_machine" {
-  Department          = "devops"
-  Billable            = "true"
-}
 resource "azurerm_virtual_machine" "catapp" {
   name                = "${var.prefix}-meow"
   location            = var.location
